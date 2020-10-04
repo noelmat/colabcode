@@ -25,7 +25,7 @@ class ColabCode:
 
     def _install_code(self):
         subprocess.run(
-            ["wget", "https://code-server.dev/install.sh"], stdout=subprocess.PIPE
+            ["curl", "https://code-server.dev/install.sh","-o","install.sh"], stdout=subprocess.PIPE
         )
         subprocess.run(["sh", "install.sh"], stdout=subprocess.PIPE)
 
